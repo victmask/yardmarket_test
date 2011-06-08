@@ -1,12 +1,14 @@
 Yardmarket::Application.routes.draw do
-  get "pages/home"
-  get "pages/about"
-  get "pages/contact"
-  get "pages/help"
 
+  root :to => "pages#home"
   resources :microposts
-
+  resources :pages
   resources :users
+  match '/about', :to => 'pages#about'
+  match '/help', :to => 'pages#help'
+  match '/contact', :to => 'pages#contact'
+  match '/signin', :to => 'pages#signin'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
