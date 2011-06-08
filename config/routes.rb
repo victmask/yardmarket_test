@@ -1,14 +1,11 @@
-Yardmarket::Application.routes.draw do
+Yardmarket::Application.routes.draw do  resources :pages
+  root :to => 'pages#home'
 
-  root :to => "pages#home"
-  resources :microposts
-  resources :pages
-  resources :users
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
   match '/contact', :to => 'pages#contact'
-  match '/signin', :to => 'pages#signin'
-
+  match '/signup', :to => 'users#new'
+  resources :pages, :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
