@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Yardmarket | <%= yield(:title) %></title>
+    <%= javascript_include_tag :defaults %>
+    <%= stylesheet_link_tag :all %>
     <%= render 'layouts/stylesheets' %>
     <%= csrf_meta_tag %>
   </head>

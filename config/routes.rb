@@ -5,7 +5,7 @@ Yardmarket::Application.routes.draw do  resources :pages
   match '/help', :to => 'pages#help'
   match '/contact', :to => 'pages#contact'
   match '/signup', :to => 'users#new'
-  resources :pages, :users
+  #resources :pages, :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
